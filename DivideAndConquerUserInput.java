@@ -5,7 +5,7 @@ public class DivideAndConquerUserInput
 {
     public static void main(String[] args)
     {
-        
+        //Input taking and defining variables required
         System.out.println("Give the number of points wanted for finding the points with shortest distance");
         Scanner scan = new Scanner(System.in);
         int TotalPoints = scan.nextInt();
@@ -26,9 +26,10 @@ public class DivideAndConquerUserInput
         SmallDist=0; 
         for (int start=0; start<TotalPoints; start++)
         {
-            //use m=i rather than 0 to avoid duplicate computations
+            
         	float dist;
-            for (int cen=start; cen<TotalPoints-1;cen++)
+            //Some parts of the understanding and implementation hava been taken from the research paper https://www.cs.cmu.edu
+            for (int cen=start; cen<TotalPoints-1;cen++) //Loop that ables to take my points
             {
                 float distxaxis = twodpoint[start][0] - twodpoint[cen+1][0];
                 float distyaxis = twodpoint[start][1] - twodpoint[cen+1][1];
@@ -49,6 +50,7 @@ public class DivideAndConquerUserInput
                 }
             }
         }
+        //Result display
         System.out.println("The 2 closest points in my given number of points including the origin which is taken our initial point always are"+AnswerPt1+"and"+AnswerPt2);
         System.out.println("And the distance between them is " + SmallDist);
         

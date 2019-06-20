@@ -15,6 +15,7 @@ public class ClosePtsDivAndConqRanInp {
          plane = new Point[N];           
          A = new Point[N];
          RanGen = new Random();  
+	//Some parts of the understanding and implementation hava been taken from the research paper https://www.cs.cmu.edu
         for (int i = 0; i < N; i++) { 
             float x = RanGen.nextInt(N<<6);
             float y = RanGen.nextInt(N<<6);

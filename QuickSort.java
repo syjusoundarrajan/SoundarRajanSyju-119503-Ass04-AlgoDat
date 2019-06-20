@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.Random;
 
 public class QuickSort {
 	// this function takes an array and two index values. It swaps the values at those indexes
